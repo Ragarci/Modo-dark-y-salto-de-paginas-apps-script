@@ -1,0 +1,33 @@
+
+//Funcion para realizar saltos de pagina.
+ 
+ var rutaWeb = ScriptApp.getService().getUrl();
+  function doGet(e) {    
+   var page = e.parameter.p || "index";
+   return HtmlService.createTemplateFromFile(page).evaluate();
+ }
+
+
+
+// Funcion que realiza el envio del formulario al sheet Comentarios.
+
+function processForm(formObject){
+
+  var url = "https://docs.google.com/spreadsheets/d/1W42-00eWLfodmKSL_8pff4RS0uqNzrc2jPQfXSEbUk8/edit#gid=0"; // ID del sheet 
+  var ss  = SpreadsheetApp.openByUrl(url);
+  var ws  = ss.getSheetByName("Comentarios");// Nombre del sheet que recibe el formulario 
+
+// Se agregan los nombres de los input del formulario "Solicitar".
+    ws.appendRow([
+      formObject.data,
+      formObject.nombre,
+      formObject.correo,     
+      formObject.areas,   
+      formObject.comentario,
+      
+      
+    
+    ]);
+
+
+}
