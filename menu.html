@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="https://kit.fontawesome.com/f09689b89n.js" crossorigin="anonymous"></script> <!--FontAwesome 5-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <base target="_top">
+  </head>
+<body  style=" box-sizing: content-box; width: 100%;">
+    
+<p>&nbsp;</p>
+
+
+<div style="text-align: center; font-size: 48px; border: 3px solid blue;"><p style="color:#5D6D7E"/>Pagina Maestra FP&R </div><!--Titulo de Pagina.-->
+
+<p>&nbsp;</p>
+
+<!-- --- BOTON DARK MODE --- ---->
+ <div>
+    <button class="darkModeSwitch" id="switch">
+      <span><i class="fas fa-sun"></i></span>
+        <span><i class="fas fa-moon"></i></span>
+            </div>
+
+
+ 
+ <!-------  Logo de Pagina.-------->
+ <div style="text-align: center;">
+  <img class="logo" src="https://lh3.google.com/u/0/d/1G1bH3vBRJ5IGXKGTuGeW2tPey5-LEOrq=w1920-h1057-iv2" width="250px" >
+    </div>
+
+
+<form id="form-report" style="padding: 10vw;padding-top:5vw">
+
+
+<div class="navegacion">
+
+  <p>&nbsp;</p>  <!-- Codigo de Tarjetas  de contenido--> 
+   
+      <ul class="nav nav-pills nav justify-content-end">
+        <li class="nav-item area-label">
+          <a class="nav-link active" aria-current="page" href="<?!= rutaWeb + '?p=5S' ?>" >5S</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="<?!= rutaWeb + '?p=formularios' ?>" class="btn btn-outline-primary" >Formulario 2</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="<?!= rutaWeb + '?p=cuestionarios' ?>" class="btn btn-outline-primary">Cuestionario 3</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="<?!= rutaWeb + '?p=plantas' ?>">Cuestionario 4</a>
+        </li>
+      </ul>
+    
+  </div>
+
+
+  <br>
+
+
+  <!----------------------------   CODIGO CSS Y JS DARK MODE ------------------------------------------->
+
+<style>
+
+  .darkModeSwitch{
+    background: #3494b1;
+    display:flex;
+    position: relative;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    border-radius: 1rem;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.darkModeSwitch span{
+    width:30px;
+    height:30px;
+    line-height:30px;
+    display:block;
+    color:#fff;
+    background: none;
+}
+
+.darkModeSwitch::after{
+    display:block;
+    background: #fffbf5;
+    width: 2.4rem;
+    height: 2.4rem;
+    position: absolute;
+    top:0;
+    left:0;
+    right:unset;
+    border-radius: 3rem;
+    transition: all .5s ease;
+    box-shadow: 0 0 2px 2px rgba(0, 0, 0, .5);
+    content: "";
+}
+
+.darkModeSwitch.active{
+  background: #fdd384;
+}
+.darkModeSwitch.active::after{
+  left:unset;
+  right:0;
+}
+
+body {
+  background: white;
+  font-family: "Lato", Helvetica, sans-serif;
+}
+body.dark{
+  background: #000000;
+}
+
+.darkModeSwitch.active, p {
+  color: grey ;
+}
+
+</style>
+
+
+<script>
+
+const switchButton = document.getElementById('switch');
+ 
+switchButton.addEventListener('click', () => {
+    document.body.classList.toggle('dark'); //toggle the HTML body the class 'dark'
+    switchButton.classList.toggle('active');//toggle the HTML button with the id='switch' with the class 'active'
+});
+
+
+</script>
+
+<!----------------------------   CODIGO CSS Y JS DARK MODE ------------------------------------------->
+
+</form>
+
+<br>
+ <p class="text-center">
+      <a href="<?!= rutaWeb + '?p=index' ?>" ><button type="button" class="btn  btn-outline-primary">Inicio</button></a>  
+      </p> 
+        </div>
+
+
+<!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+  </body>
+</html>
