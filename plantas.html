@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+  <head>
+     <script src="https://kit.fontawesome.com/f09689b89n.js" crossorigin="anonymous"></script> <!--FontAwesome 5-->
+      <script src="https://kit.fontawesome.com/2fa04ec99d.js" crossorigin="anonymous"></script>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <base target="_top">
+  </head>
+  
+  <body style=" box-sizing: content-box; width: 100%;">
+
+    <p>&nbsp;</p>
+
+
+
+<div style="text-align: center; font-size: 48px; border: 3px solid blue;"><p style="color:#5D6D7E"/> Plantas </div><!--Titulo de Pagina.-->
+
+<br>
+<!-- --- BOTON DARK MODE --- ---->
+ <div>
+    <button class="darkModeSwitch" id="switch">
+      <span><i class="fas fa-sun"></i></span>
+        <span><i class="fas fa-moon"></i></span>
+            </div>
+
+
+
+<form id="form-report" style="padding: 10vw;padding-top:5vw">
+
+<!-- Trae el formulario y lo muestra en la pagina -->
+<div v-if='seleccion=="calidad"' id="table" style="margin-top:40px" >    
+  <iframe src="https://script.google.com/a/macros/colpal.com/s/AKfycbwqLO46h8YZWw7x38h9cDPsT0ZVIA285509aYPKMCK_tn-e23SEAZ9TyPcsVfcWyvF7/exec"  width="1500"  height="500" style="border: 2px solid blue;" >
+    </iframe>
+      </div> 
+
+
+
+ <p>&nbsp;</p>
+
+  <br>
+
+<div>
+  <p class="text-center">
+      <a href="<?!= rutaWeb + '?p=index' ?>" ><button type="button" class="btn  btn-outline-primary">Inicio</button></a>  
+      </p> 
+        </div>
+
+
+<!----------------------------   CODIGO CSS Y JS DARK MODE ------------------------------------------->
+
+<!----------------------------   CODIGO CSS Y JS DARK MODE ------------------------------------------->
+<style> // CODIGO CSS BOTON DARK
+
+  .darkModeSwitch{
+    background: #3494b1;
+    display:flex;
+    position: relative;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    border-radius: 1rem;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.darkModeSwitch span{
+    width:30px;
+    height:30px;
+    line-height:30px;
+    display:block;
+    color:#fff;
+    background: none;
+}
+
+.darkModeSwitch::after{
+    display:block;
+    background: #fffbf5;
+    width: 2.4rem;
+    height: 2.4rem;
+    position: absolute;
+    top:0;
+    left:0;
+    right:unset;
+    border-radius: 3rem;
+    transition: all .5s ease;
+    box-shadow: 0 0 2px 2px rgba(0, 0, 0, .5);
+    content: "";
+}
+
+
+.darkModeSwitch.active{
+  background: #fdd384;
+  
+}
+.darkModeSwitch.active::after{
+  left:unset;
+  right:0;
+}
+
+body {
+  background: white;
+  font-family: "Lato", Helvetica, sans-serif;
+}
+body.dark{
+  background:  black;
+}
+
+
+class fa-moon{
+  
+}
+
+</style>
+
+
+<script>// CODIGO JS BOTON DARK
+
+  const switchButton = document.getElementById('switch');
+  
+  switchButton.addEventListener('click', () => {
+      document.body.classList.toggle('dark'); //toggle the HTML body the class 'dark'
+      switchButton.classList.toggle('active');//toggle the HTML button with the id='switch' with the class 'active'
+  });
+
+
+</script>
+
+<!----------------------------   FIN CODIGO CSS Y JS DARK MODE ------------------------------------------->
+
+
+</form>
+
+<!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+  </body>
+</html>
